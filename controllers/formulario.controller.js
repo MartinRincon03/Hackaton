@@ -1,4 +1,5 @@
-import Formulario from "../models/formulario.model.js";
+import { Op } from 'sequelize';
+import Formulario from '../models/formulario.model.js';
 
 const formularioController = {
   // Obtener todos los formularios
@@ -105,3 +106,4 @@ const formularioController = {
 };
 
 export default formularioController;
+

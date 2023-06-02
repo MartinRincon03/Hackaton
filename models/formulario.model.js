@@ -1,32 +1,29 @@
-import { Sequelize, DataTypes } from 'sequelize';
+import { Sequelize, DataTypes, Op } from 'sequelize';
 
 const sequelize = new Sequelize('reporte_db', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 });
 
-const Formulario = sequelize.define('formulario', {
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
+const Formulario = sequelize.define('Formulario', {
+  // Define las columnas del modelo
   titulo: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   descripcion: {
-    type: DataTypes.STRING,
-    allowNull: true,
+    type: DataTypes.TEXT,
+    allowNull: false,
   },
   ubicacion: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   fecha: {
     type: DataTypes.DATE,
-    allowNull: true,
+    allowNull: false,
   },
+
   createdAt: {
     type: DataTypes.DATE,
     allowNull: true,
@@ -38,7 +35,6 @@ const Formulario = sequelize.define('formulario', {
     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
   },
 });
-
 
 (async () => {
   try {

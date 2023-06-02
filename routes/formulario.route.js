@@ -3,12 +3,13 @@ import formularioController from '../controllers/formulario.controller.js';
 
 const router = express.Router();
 
-// Definir las rutas
-router.get('/', formularioController.getAllFormularios);
-router.post('/', formularioController.createFormulario);
-router.get('/:id', formularioController.getFormularioById);
-router.put('/:id', formularioController.updateFormulario);
-router.delete('/:id', formularioController.deleteFormulario);
-router.get('/search', formularioController.searchFormulariosByTitulo);
+// Rutas para los formularios
+router.get('/formularios', formularioController.getAllFormularios);
+router.post('/formularios', formularioController.createFormulario);
+router.get('/formularios/:id', formularioController.getFormularioById);
+router.put('/formularios/:id', formularioController.updateFormulario);
+router.delete('/formularios/:id', formularioController.deleteFormulario);
+router.get('/formularios/search', formularioController.searchFormulariosByTitulo);
 
 export default router;
+
