@@ -55,6 +55,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <div className="copyright-info">© 2023 Innobyte</div>
     </footer>
   );
 }

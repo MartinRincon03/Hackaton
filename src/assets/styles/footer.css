@@ -27,9 +27,9 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
-.column-footer span{
-    font-size: 1rem;
-    color: white;
+.column-footer span {
+  font-size: 1rem;
+  color: white;
 }
 .social-container {
   align-items: center;
@@ -41,4 +41,34 @@
   margin-right: 10px;
   color: gray;
   font-size: 20px;
+}
+.copyright-info{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top: solid 1px #395775;
+    padding-top: 1rem;
+}
+
+
+/* DISEÑO SE ADAPTA PARA TABLET  max-1023 */
+@media screen and (min-width: 768px) and (max-width: 1374px) {
+}
+
+/* DISEÑO SE ADAPTA PARA MOVIL */
+@media screen and (max-width: 767px) {
+  .logo-footer {
+    width: 65%;
+  }
+  .row-footer {
+    flex-direction: column;
+    grid-gap: 30px;
+  }
+  .social-container {
+    grid-gap: 10px;
+  }
+  .copyright-info{
+    margin-top: 1rem;
+}
 }

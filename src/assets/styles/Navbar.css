@@ -33,7 +33,7 @@
 
 @media screen and (max-width: 830px) {
   .input-css {
-    width: 300px !important;
+    width: 85% !important;
   }
   .link-css {
     margin: 20px auto !important;

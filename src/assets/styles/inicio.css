@@ -31,6 +31,7 @@ h1 {
   font-weight: 500;
   font-size: 1.6rem;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /*  ESTILOS REPORTES CREADOS */
@@ -86,7 +87,18 @@ h1 {
 
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 3rem;
+  }
+  .btn-create {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+  .report-card {
+    flex-direction: column;
+    width: 88%;
+  }
+  .report-card .container-img_report, .report-card .contenido  {
+    width: 100%;
   }
 }

@@ -28,7 +28,7 @@ const Navbar = () => {
               <div className="input-group">
                 <input
                   className="form-control input-css"
-                  type="text"
+                  type="search"
                   placeholder="Buscar Reporte"
                 />
                 <div className="input-group-append">
