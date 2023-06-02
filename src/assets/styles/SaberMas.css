@@ -1,0 +1,51 @@
+.cover-second {
+  min-height: 80vh;
+  background-image: url(https://parquesalegres.org/wp-content/uploads/2018/04/medio-ambiente-prioridad-la-boca-1170x500.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(199, 227, 255, 0.734);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding-left: 6%;
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  color: #333;
+  /* padding-left: 115px; */
+}
+
+.subtitle2 {
+  font-size: 1.5rem;
+  color: #333;
+  padding-right: 15px;
+  text-align: right;
+}
+
+.subtitle3 {
+  font-size: 1.5rem;
+  color: #333;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.styled-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.styled-link:hover {
+  background-color: #ccc;
+}
+
+.card {
+  height: 100%;
+}
