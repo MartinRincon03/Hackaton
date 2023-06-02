@@ -1,6 +1,6 @@
-import Formulario from '../models/formulario.model.js';
-import fs from 'fs';
-import path from 'path';
+import Formulario from "../models/formulario.model.js";
+import fs from "fs/promises";
+import path from "path";
 
 const formularioController = {
   // Obtener todos los formularios
@@ -9,8 +9,8 @@ const formularioController = {
       const formularios = await Formulario.findAll();
       res.json(formularios);
     } catch (error) {
-      console.error('Error al obtener los formularios:', error);
-      res.status(500).json({ error: 'Ocurrió un error al obtener los formularios' });
+      console.error("Error al obtener los formularios:", error);
+      res.status(500).json({ error: "Ocurrió un error al obtener los formularios" });
     }
   },
 
@@ -28,8 +28,8 @@ const formularioController = {
       });
       res.status(201).json(nuevoFormulario);
     } catch (error) {
-      console.error('Error al crear el formulario:', error);
-      res.status(500).json({ error: 'Ocurrió un error al crear el formulario' });
+      console.error("Error al crear el formulario:", error);
+      res.status(500).json({ error: "Ocurrió un error al crear el formulario" });
     }
   },
 
@@ -41,11 +41,11 @@ const formularioController = {
       if (formulario) {
         res.json(formulario);
       } else {
-        res.status(404).json({ error: 'No se encontró el formulario' });
+        res.status(404).json({ error: "No se encontró el formulario" });
       }
     } catch (error) {
-      console.error('Error al obtener el formulario:', error);
-      res.status(500).json({ error: 'Ocurrió un error al obtener el formulario' });
+      console.error("Error al obtener el formulario:", error);
+      res.status(500).json({ error: "Ocurrió un error al obtener el formulario" });
     }
   },
 
@@ -64,11 +64,11 @@ const formularioController = {
         });
         res.json(formulario);
       } else {
-        res.status(404).json({ error: 'No se encontró el formulario' });
+        res.status(404).json({ error: "No se encontró el formulario" });
       }
     } catch (error) {
-      console.error('Error al actualizar el formulario:', error);
-      res.status(500).json({ error: 'Ocurrió un error al actualizar el formulario' });
+      console.error("Error al actualizar el formulario:", error);
+      res.status(500).json({ error: "Ocurrió un error al actualizar el formulario" });
     }
   },
 
@@ -79,19 +79,17 @@ const formularioController = {
       const formulario = await Formulario.findByPk(id);
       if (formulario) {
         // Eliminar el archivo del servidor
-        const mediaPath = path.join(__dirname, '..', 'uploads', formulario.media);
-        if (fs.existsSync(mediaPath)) {
-          fs.unlinkSync(mediaPath);
-        }
+        const mediaPath = path.join(__dirname, "..", "uploads", formulario.media);
+        await fs.unlink(mediaPath);
 
         await formulario.destroy();
-        res.json({ message: 'Formulario eliminado correctamente' });
+        res.json({ message: "Formulario eliminado correctamente" });
       } else {
-        res.status(404).json({ error: 'No se encontró el formulario' });
+        res.status(404).json({ error: "No se encontró el formulario" });
       }
     } catch (error) {
-      console.error('Error al eliminar el formulario:', error);
-      res.status(500).json({ error: 'Ocurrió un error al eliminar el formulario' });
+      console.error("Error al eliminar el formulario:", error);
+      res.status(500).json({ error: "Ocurrió un error al eliminar el formulario" });
     }
   },
 
@@ -108,8 +106,8 @@ const formularioController = {
       });
       res.json(formularios);
     } catch (error) {
-      console.error('Error al buscar formularios por título:', error);
-      res.status(500).json({ error: 'Ocurrió un error al buscar formularios por título' });
+      console.error("Error al buscar formularios por título:", error);
+      res.status(500).json({ error: "Ocurrió un error al buscar formularios por título" });
     }
   },
 };

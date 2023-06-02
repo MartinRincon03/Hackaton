@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import connectToDatabase from './config/connection.config.js';
+import  connectToDatabase  from './config/connection.config.js';
 import formularioRouter from './routes/formulario.route.js';
 
 dotenv.config();
@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Ruta principal del formulario
-app.use('/', formularioRouter);
+app.use('/formularios', formularioRouter);
 
 const PORT = process.env.PORT || 3001;
 

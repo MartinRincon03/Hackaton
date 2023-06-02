@@ -1,26 +1,26 @@
 import express from 'express';
 import multer from 'multer';
-import formularioController from '../controllers/formulario.controller';
+import formularioController from '../controllers/formulario.controller.js';
 
 const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
 
 // Obtener todos los formularios
-router.get('/formularios', formularioController.getAllFormularios);
+router.get('/', formularioController.getAllFormularios);
 
 // Crear un nuevo formulario
-router.post('/formularios', upload.single('media'), formularioController.createFormulario);
+router.post('/', upload.single('media'), formularioController.createFormulario);
 
 // Obtener un formulario por su ID
-router.get('/formularios/:id', formularioController.getFormularioById);
+router.get('/:id', formularioController.getFormularioById);
 
 // Actualizar un formulario
-router.put('/formularios/:id', formularioController.updateFormulario);
+router.put('/:id', formularioController.updateFormulario);
 
 // Eliminar un formulario
-router.delete('/formularios/:id', formularioController.deleteFormulario);
+router.delete('/:id', formularioController.deleteFormulario);
 
 // Buscar formularios por título
-router.get('/formularios/search', formularioController.searchFormulariosByTitulo);
+router.get('/search', formularioController.searchFormulariosByTitulo);
 
 export default router;
