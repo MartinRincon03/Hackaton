@@ -1,6 +1,4 @@
 import Formulario from "../models/formulario.model.js";
-import fs from "fs/promises";
-import path from "path";
 
 const formularioController = {
   // Obtener todos los formularios
@@ -18,13 +16,11 @@ const formularioController = {
   createFormulario: async (req, res) => {
     try {
       const { titulo, descripcion, ubicacion, fecha } = req.body;
-      const media = req.file.filename; // Nombre del archivo guardado en el servidor
       const nuevoFormulario = await Formulario.create({
         titulo,
         descripcion,
         ubicacion,
         fecha,
-        media,
       });
       res.status(201).json(nuevoFormulario);
     } catch (error) {
@@ -78,10 +74,6 @@ const formularioController = {
       const { id } = req.params;
       const formulario = await Formulario.findByPk(id);
       if (formulario) {
-        // Eliminar el archivo del servidor
-        const mediaPath = path.join(__dirname, "..", "uploads", formulario.media);
-        await fs.unlink(mediaPath);
-
         await formulario.destroy();
         res.json({ message: "Formulario eliminado correctamente" });
       } else {

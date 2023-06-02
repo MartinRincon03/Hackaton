@@ -1,44 +1,44 @@
-import { Sequelize, DataTypes } from "sequelize";
+import { Sequelize, DataTypes } from 'sequelize';
 
-const sequelize = new Sequelize("reporte_db", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
+const sequelize = new Sequelize('reporte_db', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql',
 });
 
-const Formulario = sequelize.define(
-  "formulario",
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      allowNull: false,
-      primaryKey: true,
-    },
-    titulo: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    descripcion: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    ubicacion: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    fecha: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    media: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+const Formulario = sequelize.define('formulario', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
   },
-  {
-    timestamps: false,
-  }
-);
+  titulo: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  descripcion: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  ubicacion: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  fecha: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  createdAt: {
+    type: DataTypes.DATE,
+    allowNull: true,
+    defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    allowNull: true,
+    defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+  },
+});
+
 
 (async () => {
   try {

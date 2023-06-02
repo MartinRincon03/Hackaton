@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Ruta principal del formulario
-app.use('/formularios', formularioRouter);
+app.use('/', formularioRouter);
 
 const PORT = process.env.PORT || 3001;
 
