@@ -83,6 +83,18 @@ h1 {
   width: 60%;
 }
 
+.maps-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.map_canvas{
+  height: 50vh;
+}
+
 
 
 @media screen and (max-width: 767px) {

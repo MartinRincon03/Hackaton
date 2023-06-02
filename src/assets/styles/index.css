@@ -13,3 +13,8 @@ body{
 .container-pages{
     margin-top: 115px;
 }
+
+.leaflet-container {
+    width: 75vw;
+    height: 60vh;
+  }
