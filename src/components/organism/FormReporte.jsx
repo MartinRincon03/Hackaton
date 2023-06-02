@@ -1,44 +1,42 @@
+import { useState, useRef } from "react";
 import Title from "../atoms/Title";
 import WrapperInput from "../molecules/WrapperInput";
 import "../../assets/styles/formReporter.css";
 
 function FormReporte() {
-  const handlerClick = () => {
-    e.preventDefault();
-    console.log("Envio los datos");
-  };
+  const form = useRef();
+
+  let endpoint = "http://localhost:3001/formularios/"
 
   return (
     <div className="form_register">
-      <Title
-        msn={"Crear Reporte"}
-      />
-      <form>
+      <Title msn={"Crear Reporte"} />
+      <form ref={form}>
         <WrapperInput
           msn="Titulo para tu reporte"
           type="text"
           placeholder="P.j. Incendio en el cerro Mactumatzá"
-          name={"titulo"}
+          name="titulo"
         />
         <WrapperInput
           msn="Descripcion"
           type="text"
           placeholder="Añade una breve descripcion del suceso"
-          name={"descripcion"}
+          name="descripcion"
         />
         <WrapperInput
           msn="Ubicacion"
           type="text"
           placeholder="lat, long"
-          name={"ubicacion"}
+          name="ubicacion"
         />
-        <WrapperInput msn="Fecha" type="date" placeholder="" name={"fecha"} />
-        <div class="custom-input_date">
-          <input type="file" id="image-input" accept="image/*" />
-          <label for="image-input">Seleccionar imagen</label>
-        </div>
-
-        <button type="button" handlerClick={handlerClick} className="btn-crear">
+        <WrapperInput
+          msn="Fecha"
+          type="date"
+          placeholder=""
+          name="fecha"
+        />
+        <button type="submit" className="btn-crear">
           Enviar reporte
         </button>
       </form>
