@@ -22,18 +22,18 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <div class="input-group">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <div className="input-group">
                 <input
-                  class="form-control input-css"
+                  className="form-control input-css"
                   type="text"
                   placeholder="Buscar Reporte"
                 />
-                <div class="input-group-append">
+                <div className="input-group-append">
                   <button
-                    class="btn btn-outline-secondary btn-css"
+                    className="btn btn-outline-secondary btn-css"
                     type="button"
                   >
                     <img src={IconSearch} />
@@ -42,28 +42,28 @@ const Navbar = () => {
               </div>
             </li>
           </ul>
-          <ul class="navbar-nav ">
-            <li class="nav-item">
+          <ul className="navbar-nav ">
+            <li className="nav-item">
               <Link
-                class="nav-link link-css"
+                className="nav-link link-css"
                 style={{ paddingLeft: "15rem" }}
                 to={"/"}
               >
                 Inicio
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
-                class="nav-link link-css"
+                className="nav-link link-css"
                 style={{ paddingLeft: "7rem" }}
                 to={"/sabermas"}
               >
                 Saber más
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
-                class="nav-link link-css"
+                className="nav-link link-css"
                 style={{ paddingLeft: "7rem" }}
                 to={"/nosotros"}
               >

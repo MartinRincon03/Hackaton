@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
@@ -9,18 +9,20 @@ import Nosotros from "../pages/Nosotros";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Inicio/>} />
-          <Route path="/sabermas" element={<SaberMas />} />
-          <Route path="/nosotros" element={<Nosotros />} />
+        <div className="container-pages">
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/sabermas" element={<SaberMas />} />
+            <Route path="/nosotros" element={<Nosotros />} />
 
-        {/* <Route path="/*" element={<NotFound />} /> */}
-        </Routes>
+            {/* <Route path="/*" element={<NotFound />} /> */}
+          </Routes>
+        </div>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
