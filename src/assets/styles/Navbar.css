@@ -1,0 +1,43 @@
+.custom-logo {
+  width: 90px; /* Tamaño personalizado */
+  height: auto;
+  margin: 0;
+  padding: 0;
+  margin-right: 2.6rem;
+}
+
+.input-css {
+  width: 350px !important;
+  margin-right: -5px;
+  border: solid 2px #466686;
+  border-radius: 8px;
+}
+.btn-css {
+  background-color: white;
+  border: solid 2px #466686;
+  border-left: none;
+  padding: 0;
+  height: 40px;
+}
+
+.mr-5 {
+  margin-right: 10% !important;
+}
+
+.link-css {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #445c74;
+}
+
+@media screen and (max-width: 830px) {
+  .input-css {
+    width: 300px !important;
+  }
+  .link-css {
+    margin: 20px auto !important;
+    padding: 10px 25% !important;
+    text-align: center;
+  }
+}
