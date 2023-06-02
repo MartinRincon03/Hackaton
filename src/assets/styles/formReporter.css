@@ -1,0 +1,107 @@
+
+.wrapper_input{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    margin-bottom: 1.5rem;
+}
+.labelWrap{
+    font-size: 1.4rem;
+    color: #71b8fe;
+    font-weight: 500;
+}
+.inputWrap{
+    padding: 15px 10px;
+    font-size: 1rem;
+    background: #F1F8FF;
+    color: #2e97ff;
+    border-radius: 8px;
+    border: none;
+}
+
+/* ---------------------------------------- */
+.contenedor_form{
+    position: relative;
+    min-height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    padding-bottom: 30px;
+    background: rgba(15, 16, 16, 0.539);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.form_register{
+    min-height: 100%;
+    width: 90%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_register form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-crear{
+    width: 85%;
+    padding: .8rem 0;
+    margin: 5% 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: #3c8bdb;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-input_date {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    background: #71b8fe;
+    margin: 2rem 0; 
+    color: #2e97ff;
+  }
+  
+  .custom-input_date input[type="file"] {
+    display: none;
+  }
+  
+  .custom-input_date label {
+    display: block;
+    padding: 10px 20px;
+    background: #1689fd;
+    color: #2e97ff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .custom-input_date label::after {
+    content: '';
+  }
+  
+  .custom-input_date input[type="file"]:focus + label,
+  .custom-input_date input[type="file"]:valid + label {
+    background-color: #ccc;
+  }
+  
+  .custom-input_date input[type="file"]:valid + label::after {
+    content: 'Archivo seleccionado';
+  }

@@ -7,6 +7,7 @@ import Inicio from "../pages/Inicio";
 import SaberMas from "../pages/SaberMas";
 import Nosotros from "../pages/Nosotros";
 import Footer from "../components/molecules/Footer";
+import CrearReporte from "../pages/CrearReporte";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/sabermas" element={<SaberMas />} />
             <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/crearreporte" element={<CrearReporte />} />
 
             {/* <Route path="/*" element={<NotFound />} /> */}
           </Routes>
