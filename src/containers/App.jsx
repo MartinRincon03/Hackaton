@@ -6,6 +6,7 @@ import Navbar from "../components/molecules/Navbar";
 import Inicio from "../pages/Inicio";
 import SaberMas from "../pages/SaberMas";
 import Nosotros from "../pages/Nosotros";
+import Footer from "../components/molecules/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             {/* <Route path="/*" element={<NotFound />} /> */}
           </Routes>
         </div>
+        <Footer/>
       </div>
     </Router>
   );

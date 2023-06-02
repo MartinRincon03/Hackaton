@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Hepta+Slab:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+.container-footer {
+  background-color: #4ca5ff;
+  padding: 20px;
+  margin-top: 10%;
+}
+
+.row-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.column-footer {
+  flex-basis: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+.logo-footer {
+  width: 35%;
+}
+.row-footer h2 {
+  color: #edf3ff;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 70px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.column-footer span{
+    font-size: 1rem;
+    color: white;
+}
+.social-container {
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 30px;
+  color: #233a4f;
+}
+.row-footer .social-icon {
+  margin-right: 10px;
+  color: gray;
+  font-size: 20px;
+}
