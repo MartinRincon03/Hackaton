@@ -6,19 +6,6 @@
   margin-right: 2.6rem;
 }
 
-.input-css {
-  width: 350px !important;
-  margin-right: -5px;
-  border: solid 2px #466686;
-  border-radius: 8px;
-}
-.btn-css {
-  background-color: white;
-  border: solid 2px #466686;
-  border-left: none;
-  padding: 0;
-  height: 40px;
-}
 
 .mr-5 {
   margin-right: 10% !important;

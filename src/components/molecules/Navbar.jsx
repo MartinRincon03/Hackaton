@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.jpeg";
-import IconSearch from "../../assets/img/Search.svg";
 import "../../assets/styles/Navbar.css";
 
 const Navbar = () => {
@@ -23,25 +22,11 @@ const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mr-auto">
+          {/* <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <div className="input-group">
-                <input
-                  className="form-control input-css"
-                  type="search"
-                  placeholder="Buscar Reporte"
-                />
-                <div className="input-group-append">
-                  <button
-                    className="btn btn-outline-secondary btn-css"
-                    type="button"
-                  >
-                    <img src={IconSearch} />
-                  </button>
-                </div>
-              </div>
+              
             </li>
-          </ul>
+          </ul> */}
           <ul className="navbar-nav ">
             <li className="nav-item">
               <Link

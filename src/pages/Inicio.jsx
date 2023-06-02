@@ -20,6 +20,22 @@ function Inicio() {
             ubicacion: 'Al sur poniente de la cabecera municipal de Suchiapa, en las coordenadas GPS: 16°38’09"N y 93°08’04"O',
             fecha: '2023-05-31',
             imagen: '../../public/img/imgDerrameAguasRecid.jpg'
+        },
+        {
+            id: 3,
+            titulo: 'Peligrosa contaminacion en el puerto chiapas',
+            descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor sem non odio suscipit scelerisque. Phasellus iaculis volutpat ipsum nec accumsan. Maecenas vitae dui sed enim efficitur tempus. Vestibulum vel mi a nunc ornare suscipit. Nulla nec metus vel nibh aliquet finibus.',
+            ubicacion: 'Malpaso, Chiapas  GPS: 16°38’09"N y 93°08’04"O',
+            fecha: '2023-05-31',
+            imagen: '../../public/img/imgDerrameAguasRecid.jpg'
+        },
+        {
+            id: 4,
+            titulo: 'Incendio de pastisales en el nuevo libramiento sur',
+            descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor sem non odio suscipit scelerisque. Phasellus iaculis volutpat ipsum nec accumsan. Maecenas vitae dui sed enim efficitur tempus. Vestibulum vel mi a nunc ornare suscipit. Nulla nec metus vel nibh aliquet finibus.',
+            ubicacion: 'Al sur poniente de la cabecera municipal de Suchiapa, en las coordenadas GPS: 16°38’09"N y 93°08’04"O',
+            fecha: '2023-05-31',
+            imagen: '../../public/img/imgIncendioCerro.png'
         }
     ]
 
