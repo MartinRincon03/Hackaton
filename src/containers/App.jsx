@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import Navbar from "../components/atoms/Navbar";
+import Navbar from "../components/molecules/Navbar";
 import Inicio from "../pages/Inicio";
 import SaberMas from "../pages/SaberMas";
 import Nosotros from "../pages/Nosotros";
